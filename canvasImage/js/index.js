@@ -22,17 +22,9 @@ ctxCanvas.stroke();*/
 /*ctxCanvas.font = '30px Courier New';
 ctxCanvas.fillText('This is Canvas', 125, 250);*/
 
-/* desenhando paisagem com canvas */
-/* chão */
-ctxCanvas.fillStyle = '#090';
-ctxCanvas.fillRect(0,350,500,150);
-
-/* céu */
-ctxCanvas.fillStyle = '#4078e0';
-ctxCanvas.fillRect(0,0,500,350);
-
-/* sol */
-ctxCanvas.beginPath();
-ctxCanvas.arc(250,350,80,3.14,2*Math.PI);
-ctxCanvas.fillStyle = '#ffa500';
-ctxCanvas.fill();
+/* manipulando imagens no canvas */
+var image = new Image();
+image.src = "../img/teste.jpg";
+window.onload = function() {
+    ctxCanvas.drawImage(image,0,0);
+}
